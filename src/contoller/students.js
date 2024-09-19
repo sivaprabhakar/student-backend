@@ -30,6 +30,7 @@ export const getStudents = async (req, res) => {
       res.status(200).send(students);
   
     } catch (error) {
+      console.error("Error in getStudents: ", error)
       res.status(500).send({ error: error.message });
     }
   };
